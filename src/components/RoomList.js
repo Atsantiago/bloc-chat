@@ -17,6 +17,7 @@ class RoomList extends Component {
     this.roomsRef.on('child_added', snapshot => {
       const room = {key: snapshot.key, value: snapshot.val() };
       this.setState({ rooms: this.state.rooms.concat( room.value )});
+      console.log(snapshot);
     })
   }
 

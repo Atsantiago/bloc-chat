@@ -16,6 +16,16 @@ var config = {
  firebase.initializeApp(config);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeRooms: '',
+    };
+  }
+
+
+
   render() {
     return (
       <div className="App">

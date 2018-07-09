@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import messageData from './../data/messages.js';
 
 class MessageList extends Component {
   constructor(props) {
@@ -19,3 +20,5 @@ class MessageList extends Component {
     //  this.setState({ rooms: this.state.rooms.concat( room.value )});
     })
   }
+
+  export default MessageList;
