@@ -6,19 +6,20 @@ class MessageList extends Component {
     super(props);
 
     this.state = {
-
+      username: '',
+      content: '',
+      sentAt: '',
+      roomId: ''
     };
 
-//receive firebase as prop
-  //  this.roomsRef = this.props.firebase.database().ref('rooms');
+  this.roomsRef = this.props.firebase.database().ref('rooms');
 
   }
 
   componentDidMount() {
     this.roomsRef.on('child_added', snapshot => {
-    //  const message = {key: snapshot.key, value: snapshot.val() };
-    //  this.setState({ rooms: this.state.rooms.concat( room.value )});
+
     })
   }
-
-  export default MessageList;
+}
+export default MessageList;
